@@ -39,7 +39,7 @@ const NameForm = () => {
         } catch (error) {
           // setMessage('ROOOOOOO Formulário enviado com sucesso!');
           //setMessage(`${URL}`);
-          setMessage(response.data);
+          setMessage(error.response.data);
         }
 
 
