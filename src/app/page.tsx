@@ -16,7 +16,11 @@ const NameForm = () => {
     if (firstName && lastName) {
       // Aqui você pode adicionar a lógica para enviar os dados para um banco de dados ou API.
       console.log('Dados enviados:', { firstName, lastName });
-   
+  
+
+      const URL = process.env.NEXT_PUBLIC_ENDPOINT_HOST;
+
+ 
       try {
           // Simula uma requisição HTTP com Axios para uma API
           // const response = await axios.post('https://api.example.com/presence-check', {
@@ -24,8 +28,6 @@ const NameForm = () => {
           //  token: lastName,
           //});
 
-
-          const URL = process.env.NEXT_PUBLIC_ENDPOINT_HOST
 
           const response = await axios.get('http://153.92.214.57/health')
           //setMessage(JSON.stringify(response, null, 2));
