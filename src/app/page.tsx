@@ -1,5 +1,6 @@
 "use client";
 
+import axios from "axios";
 import { useState } from "react";
 
 // Componente do formulário para nome e sobrenome, estilizado com Tailwind CSS.
@@ -10,14 +11,32 @@ const NameForm = () => {
 
   // Função para lidar com o envio do formulário.
   //const handleSubmit = (e) => {
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (firstName && lastName) {
       // Aqui você pode adicionar a lógica para enviar os dados para um banco de dados ou API.
       console.log('Dados enviados:', { firstName, lastName });
-      setMessage('Formulário enviado com sucesso!');
-      setFirstName('');
-      setLastName('');
+   
+      try {
+          // Simula uma requisição HTTP com Axios para uma API
+          // const response = await axios.post('https://api.example.com/presence-check', {
+          //  name: firstName,
+          //  token: lastName,
+          //});
+
+          const response = await axios.get('http://153.92.214.57/health')
+          //setMessage(JSON.stringify(response, null, 2));
+          setMessage(response.data.status)
+
+          // setMessage(response.data);
+           setFirstName('');
+           setLastName('');
+        } catch (error) {
+          setMessage('ROOOOOOO Formulário enviado com sucesso!');
+        }
+
+
+
     } else {
       setMessage('Por favor, preencha todos os campos.');
     }
