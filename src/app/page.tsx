@@ -9,7 +9,8 @@ const NameForm = () => {
   const [message, setMessage] = useState('');
 
   // Função para lidar com o envio do formulário.
-  const handleSubmit = (e) => {
+  //const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (firstName && lastName) {
       // Aqui você pode adicionar a lógica para enviar os dados para um banco de dados ou API.
