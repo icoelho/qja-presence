@@ -25,7 +25,7 @@ const NameForm = () => {
 
   return (
     <div className="w-full max-w-md p-8 mx-auto mt-8 bg-white rounded-xl shadow-lg border border-gray-200">
-      <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">Registro Presença</h2>
+      <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">Registro de Presença</h2>
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
           <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">Nome</label>
@@ -81,7 +81,7 @@ export default function Home() {
           O componente 'next/image' foi removido para evitar erros de compilação
           em ambientes que não o suportam. O logo e os ícones foram substituídos por texto.
         */}
-        <div className="text-4xl font-extrabold text-gray-800 dark:text-white">QJA - JUDO ACADEMY</div>
+        <div className="text-4xl font-extrabold text-gray-800 dark:text-white">Quero Quero JUDO</div>
         
         {/* Adiciona o componente do formulário aqui */}
         <NameForm />
