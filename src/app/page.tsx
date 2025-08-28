@@ -33,7 +33,7 @@ const NameForm = () => {
            setLastName('');
         } catch (error) {
           // setMessage('ROOOOOOO Formulário enviado com sucesso!');
-          setMessage(error);
+          setMessage(error.message);
         }
 
 
