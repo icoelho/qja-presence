@@ -32,7 +32,7 @@ const NameForm = () => {
           setMessage(response.data.status)
 
           // setMessage(response.data);
-           setFirstName('');
+           setFirstName('ok');
            setLastName('');
         } catch (error) {
           // setMessage('ROOOOOOO Formulário enviado com sucesso!');
