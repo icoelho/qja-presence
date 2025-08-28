@@ -24,6 +24,9 @@ const NameForm = () => {
           //  token: lastName,
           //});
 
+
+          const url = process.env.ENDPOINT_HOST
+
           const response = await axios.get('http://153.92.214.57/health')
           //setMessage(JSON.stringify(response, null, 2));
           setMessage(response.data.status)
@@ -33,7 +36,7 @@ const NameForm = () => {
            setLastName('');
         } catch (error) {
           // setMessage('ROOOOOOO Formulário enviado com sucesso!');
-          setMessage(error.message);
+          setMessage(url);
         }
 
 
