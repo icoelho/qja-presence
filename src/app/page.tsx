@@ -25,7 +25,7 @@ const NameForm = () => {
           //});
 
 
-          const url = process.env.NEXT_PUBLIC_ENDPOINT_HOST
+          const URL = process.env.NEXT_PUBLIC_ENDPOINT_HOST
 
           const response = await axios.get('http://153.92.214.57/health')
           //setMessage(JSON.stringify(response, null, 2));
@@ -36,7 +36,7 @@ const NameForm = () => {
            setLastName('');
         } catch (error) {
           // setMessage('ROOOOOOO Formulário enviado com sucesso!');
-          setMessage(url);
+          setMessage(URL);
         }
 
 
