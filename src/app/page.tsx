@@ -29,7 +29,7 @@ const NameForm = () => {
           //});
 
 
-          const response = await axios.post(`${URL}/health`, data)
+          const response = await axios.post(`${URL}/health`)
           //const response = await axios.get('http://153.92.214.57/health')
           //setMessage(JSON.stringify(response, null, 2));
           setMessage(response.data.status)
@@ -113,7 +113,7 @@ export default function Home() {
 
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a>@2025 - QJA</a>
+        <a>@2025 - QJA version 1.2</a>
        
      
       </footer>
