@@ -97,7 +97,7 @@ export default function Home() {
 
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a>@2025 - QJA Filiado a FPJudo</a>
+        <a>Filiada a Federação Paulista de JUDO</a>
        
      
       </footer>
