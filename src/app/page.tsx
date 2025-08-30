@@ -22,7 +22,7 @@ const NameForm = () => {
 
  
       try {
-          await axios.post(`${URL}/register?name=firstName&token=lastName`)
+          await axios.post(`${URL}/register?name=${firstName}&token=${lastName}`)
 
           //const response = await axios.get(`${URL}/health`)
           //const response = await axios.get('http://153.92.214.57/health')
