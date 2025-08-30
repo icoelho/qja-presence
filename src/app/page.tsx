@@ -22,14 +22,13 @@ const NameForm = () => {
 
  
       try {
-          // Simula uma requisição HTTP com Axios para uma API
-          // const response = await axios.post('https://api.example.com/presence-check', {
-          //  name: firstName,
-          //  token: lastName,
-          //});
+          const response = await axios.post(`${URL}/register`, {
+            name: firstName,
+            token: lastName,
+          });
 
 
-          const response = await axios.get(`${URL}/health`)
+          //const response = await axios.get(`${URL}/health`)
           //const response = await axios.get('http://153.92.214.57/health')
           //setMessage(JSON.stringify(response, null, 2));
           setMessage(response.data.status)
@@ -113,7 +112,7 @@ export default function Home() {
 
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a>@2025 - QJA version 1.2</a>
+        <a>@2025 - QJA version 25.9</a>
        
      
       </footer>
