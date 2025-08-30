@@ -14,28 +14,18 @@ const NameForm = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (firstName && lastName) {
-      // Aqui você pode adicionar a lógica para enviar os dados para um banco de dados ou API.
-      console.log('Dados enviados:', { firstName, lastName });
-  
-
       const URL = process.env.NEXT_PUBLIC_ENDPOINT_HOST;
-
  
       try {
           const response = await axios.post(`${URL}/register?name=${firstName}&token=${lastName}`)
 
-          //const response = await axios.get(`${URL}/health`)
-          //const response = await axios.get('http://153.92.214.57/health')
-          //setMessage(JSON.stringify(response, null, 2));
            setMessage(response.data.status)
 
            setFirstName('');
            setLastName('');
         } catch (error) {
-          setMessage('ROOOOOOO Formulário enviado com sucesso!');
+          setMessage('E R R O !');
         }
-
-
 
     } else {
       setMessage('Por favor, preencha todos os campos.');
@@ -79,7 +69,7 @@ const NameForm = () => {
             type="submit"
             className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
           >
-            Enviar
+            Confirmar
           </button>
         </div>
       </form>
@@ -107,7 +97,7 @@ export default function Home() {
 
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a>@2025 - QJA version 25.9</a>
+        <a>@2025 - QJA Filiado a FPJudo</a>
        
      
       </footer>
