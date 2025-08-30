@@ -22,15 +22,14 @@ const NameForm = () => {
 
  
       try {
-          await axios.post(`${URL}/register?name=${firstName}&token=${lastName}`)
+          const response = await axios.post(`${URL}/register?name=${firstName}&token=${lastName}`)
 
           //const response = await axios.get(`${URL}/health`)
           //const response = await axios.get('http://153.92.214.57/health')
           //setMessage(JSON.stringify(response, null, 2));
-          //setMessage(response.data.status)
+           setMessage(response.data.status)
 
-          // setMessage(response.data);
-           setFirstName('ok');
+           setFirstName('');
            setLastName('');
         } catch (error) {
           setMessage('ROOOOOOO Formulário enviado com sucesso!');
