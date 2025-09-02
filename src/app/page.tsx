@@ -90,8 +90,21 @@ export default function Home() {
           O componente 'next/image' foi removido para evitar erros de compilação
           em ambientes que não o suportam. O logo e os ícones foram substituídos por texto.
         */}
-        <div className="text-4xl font-extrabold text-gray-800 dark:text-white">Quero Quero JUDO</div>
-        
+ <div className="flex justify-center items-center gap-4 mb-4">
+        <img
+          src="qja.png"
+          alt="Logo da Federação Paulista de JUDO"
+          className="h-24 w-auto mb-4"
+        />
+
+        <img
+          src="fpj.png"
+          alt="Logo da Federação Paulista de JUDO"
+          className="h-24 w-auto mb-4"
+        />
+</div>
+
+          
         {/* Adiciona o componente do formulário aqui */}
         <NameForm />
 
